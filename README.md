@@ -1,4 +1,4 @@
-# Abhisek's Portfolio - Neural Nexus Theme 🧠
+# Abhisek's Portfolio
 
 A high-tech, production-grade personal portfolio built for an AI/ML Engineer. Designed with a custom **"Neural Nexus"** theme featuring a deep black aesthetic, neon cyan accents, and technical typography.
 
@@ -7,7 +7,7 @@ A high-tech, production-grade personal portfolio built for an AI/ML Engineer. De
 ![Portfolio Preview](src/assets/photo.jpg) 
 *(Note: Replace this with a screenshot of your actual website later)*
 
-## 🚀 Features
+## Features
 
 *   **Responsive Design**: Fully responsive layout optimized for all devices.
 *   **Custom Theme**: "Neural Nexus" design system with `Space Grotesk` and `JetBrains Mono` fonts.
@@ -19,14 +19,14 @@ A high-tech, production-grade personal portfolio built for an AI/ML Engineer. De
     *   **Contact**: Functional form integrated with Formspree.
 *   **Performance**: Built with Vite for instant server start and lightning-fast HMR.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 *   **Frontend**: React 19, JavaScript (ES6+)
 *   **Build Tool**: Vite
 *   **Styling**: Vanilla CSS3 (Variables, Flexbox, Grid)
 *   **Deployment**: GitHub Pages
 
-## 🏃‍♂️ Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -51,7 +51,7 @@ A high-tech, production-grade personal portfolio built for an AI/ML Engineer. De
     npm run dev
     ```
 
-## 🚢 Deployment
+## Deployment
 
 This project is configured to deploy to GitHub Pages.
 

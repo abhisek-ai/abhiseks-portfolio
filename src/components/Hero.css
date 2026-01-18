@@ -1,0 +1,164 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Tech Grid Decoration */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(0, 242, 255, 0.05) 0%, transparent 70%);
+    z-index: -1;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 60px;
+}
+
+/* Glitch/Tech text effect can be added later, keeping it clean for now */
+
+.greeting {
+    font-family: var(--font-mono);
+    color: var(--primary);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.greeting::after {
+    content: '';
+    height: 1px;
+    width: 50px;
+    background: var(--primary);
+    opacity: 0.5;
+}
+
+.name {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 20px;
+    color: #fff;
+    letter-spacing: -2px;
+}
+
+.role {
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.highlight {
+    color: var(--text-light);
+    border-bottom: 1px solid var(--primary);
+}
+
+.bio {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    margin-bottom: 40px;
+    max-width: 550px;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* Image Hexagon/Frame Style */
+.hero-image {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.img-wrapper {
+    position: relative;
+    width: 320px;
+    height: 400px;
+    /* Tech border */
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(1.1);
+    /* Grayscale look */
+    transition: all 0.5s;
+}
+
+.img-wrapper:hover img {
+    filter: grayscale(0%) contrast(1);
+}
+
+/* Decorative squares */
+.img-wrapper::before,
+.img-wrapper::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--primary);
+    transition: all 0.3s;
+}
+
+.img-wrapper::before {
+    top: -1px;
+    left: -1px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.img-wrapper::after {
+    bottom: -1px;
+    right: -1px;
+    border-left: none;
+    border-top: none;
+}
+
+@media (max-width: 900px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .hero-content {
+        order: 2;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-image {
+        order: 1;
+    }
+
+    .greeting::after {
+        display: none;
+    }
+
+    .name {
+        font-size: 3rem;
+    }
+}

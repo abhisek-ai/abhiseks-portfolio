@@ -1,0 +1,44 @@
+.footer {
+    padding: 60px 0 40px;
+    background: var(--bg-card);
+    border-top: 1px solid var(--border-color);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    text-align: center;
+    /* Center everything */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    /* Stack vertically */
+    align-items: center;
+    gap: 30px;
+    /* Space between links and copyright */
+}
+
+.social-links {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.social-links a {
+    opacity: 0.7;
+    transition: all 0.2s;
+    color: var(--text-light);
+    font-size: 1rem;
+    position: relative;
+}
+
+.social-links a:hover {
+    opacity: 1;
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.copyright {
+    color: var(--text-gray);
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}

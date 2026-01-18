@@ -1,0 +1,119 @@
+.contact {
+    padding: 120px 0;
+    position: relative;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/* Left Side Styling */
+.contact-left {
+    padding-right: 20px;
+}
+
+.contact-heading {
+    font-size: 2.5rem;
+    font-family: var(--font-heading);
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: var(--text-light);
+}
+
+.contact-heading .highlight {
+    color: var(--primary);
+}
+
+.contact-text {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.detail-item .label {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-gray);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.detail-item .value {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.detail-item a.value:hover {
+    color: var(--primary);
+}
+
+/* Right Side Styling (Form) */
+.contact-right {
+    background: var(--bg-card);
+    padding: 40px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    background: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    color: var(--text-light);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.1);
+}
+
+.form-submit {
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-left {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .contact-details {
+        align-items: center;
+    }
+}

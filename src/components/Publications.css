@@ -1,0 +1,114 @@
+.publications {
+    padding: 100px 0;
+    position: relative;
+}
+
+.publications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.pub-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 35px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.pub-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--secondary);
+    /* Electric Violet for pubs to distinguish */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.pub-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary);
+    box-shadow: 0 10px 40px rgba(112, 0, 255, 0.1);
+}
+
+.pub-card:hover::before {
+    opacity: 1;
+}
+
+.pub-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+}
+
+.pub-conf {
+    color: var(--secondary);
+    font-weight: 700;
+    border: 1px solid rgba(112, 0, 255, 0.3);
+    padding: 4px 10px;
+    border-radius: var(--radius);
+}
+
+.pub-year {
+    color: var(--text-gray);
+}
+
+.pub-title {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--text-light);
+    line-height: 1.4;
+}
+
+.pub-desc {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.pub-link-wrapper {
+    margin-top: auto;
+}
+
+.pub-link {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--text-light);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0.8;
+}
+
+.pub-link:hover {
+    opacity: 1;
+    color: var(--secondary);
+}
+
+.arrow {
+    transition: transform 0.2s;
+}
+
+.pub-link:hover .arrow {
+    transform: translateX(5px);
+}
+
+@media (max-width: 600px) {
+    .publications-grid {
+        grid-template-columns: 1fr;
+    }
+}
